@@ -4,13 +4,49 @@
   "word": "_WORD",
   "rules": {
     "start": {
-      "type": "REPEAT",
+      "type": "CHOICE",
+      "members": [
+        {
+          "type": "REPEAT1",
+          "content": {
+            "type": "SYMBOL",
+            "name": "program_definition"
+          }
+        },
+        {
+          "type": "SYMBOL",
+          "name": "copybook_definition"
+        }
+      ]
+    },
+    "copybook_definition": {
+      "type": "REPEAT1",
       "content": {
         "type": "CHOICE",
         "members": [
           {
+            "type": "SEQ",
+            "members": [
+              {
+                "type": "SYMBOL",
+                "name": "data_description"
+              },
+              {
+                "type": "REPEAT1",
+                "content": {
+                  "type": "STRING",
+                  "value": "."
+                }
+              }
+            ]
+          },
+          {
             "type": "SYMBOL",
-            "name": "program_definition"
+            "name": "copy_statement"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "exec_statement"
           }
         ]
       }
@@ -7092,7 +7128,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_WORD"
+                "name": "WORD"
               },
               {
                 "type": "SYMBOL",
@@ -7134,7 +7170,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_WORD"
+                "name": "WORD"
               },
               {
                 "type": "SYMBOL",
@@ -19419,5 +19455,6 @@
     }
   ],
   "inline": [],
-  "supertypes": []
+  "supertypes": [],
+  "reserved": {}
 }

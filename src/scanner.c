@@ -107,68 +107,47 @@ static bool match_keyword(TSLexer *lexer, const char *keyword) {
 
 // Scan EXEC ... END-EXEC block
 static bool scan_exec_block(TSLexer *lexer) {
-    // Must start with EXEC
-    if (!char_eq_i(lexer->lookahead, 'E')) {
-        return false;
-    }
-
-    // Try to match EXEC
     if (!match_keyword(lexer, "EXEC")) {
         return false;
     }
-
-    // Must be followed by whitespace
     if (!iswspace(lexer->lookahead)) {
         return false;
     }
 
-    // Skip whitespace
     while (iswspace(lexer->lookahead)) {
         lexer->advance(lexer, false);
     }
 
-    // Check for known EXEC types: SQL, CICS, DLI
-    // We accept any word after EXEC, but these are the common ones
-    bool found_type = false;
-    if (char_eq_i(lexer->lookahead, 'S') ||
-        char_eq_i(lexer->lookahead, 'C') ||
-        char_eq_i(lexer->lookahead, 'D')) {
-        found_type = true;
-    }
-
-    if (!found_type) {
+    // Only accept known EXEC types: SQL, CICS, DLI
+    char first = towlower(lexer->lookahead);
+    if (first != 's' && first != 'c' && first != 'd') {
         return false;
     }
 
-    // Now scan until END-EXEC
-    // We need to find END-EXEC (case insensitive)
-    int end_exec_state = 0;  // Tracks matching "END-EXEC"
+    // Scan until END-EXEC (case insensitive state machine)
     const char *end_exec = "END-EXEC";
+    int state = 0;
 
     while (lexer->lookahead != 0) {
         char c = lexer->lookahead;
 
-        // Try to match END-EXEC
-        if (char_eq_i(c, end_exec[end_exec_state])) {
-            end_exec_state++;
-            if (end_exec[end_exec_state] == 0) {
-                // Matched END-EXEC
+        if (char_eq_i(c, end_exec[state])) {
+            state++;
+            if (end_exec[state] == 0) {
                 lexer->advance(lexer, false);
                 lexer->mark_end(lexer);
                 lexer->result_symbol = EXEC_BLOCK;
                 return true;
             }
         } else if (char_eq_i(c, 'E')) {
-            // Could be start of END-EXEC
-            end_exec_state = 1;
+            state = 1;
         } else {
-            end_exec_state = 0;
+            state = 0;
         }
 
         lexer->advance(lexer, false);
     }
 
-    // Hit EOF without finding END-EXEC
     return false;
 }
 

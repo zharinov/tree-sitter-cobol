@@ -31,7 +31,8 @@ evaluate when
             (WORD))))
       (END_EVALUATE)
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 evaluate when 2
@@ -76,7 +77,8 @@ evaluate when 2
             (WORD))))
       (END_EVALUATE)
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 evaluate when other
@@ -128,7 +130,8 @@ evaluate when other
             (WORD))))
       (END_EVALUATE)
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 evaluate when when
@@ -167,7 +170,8 @@ evaluate when when
             (WORD))))
       (END_EVALUATE)
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 evaluate when also
@@ -209,4 +213,5 @@ evaluate when also
             (WORD))))
       (END_EVALUATE)
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))

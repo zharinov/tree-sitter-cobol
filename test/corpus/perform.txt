@@ -19,7 +19,8 @@ perform label
             (qualified_word
               (WORD)))))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 perform label thru label
@@ -47,8 +48,10 @@ perform label thru label
             (qualified_word
               (WORD)))))
       (period)
-      (paragraph_header)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 perform label FOREVER
@@ -73,7 +76,8 @@ perform label FOREVER
         option: (perform_option
           (FOREVER)))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 perform continue
@@ -122,7 +126,8 @@ perform label times
           times: (number
             (integer))))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 perform label UNTIL
@@ -169,4 +174,5 @@ perform label UNTIL
               (number
                 (integer))))))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))

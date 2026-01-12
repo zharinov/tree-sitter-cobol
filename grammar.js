@@ -31,10 +31,17 @@ module.exports = grammar({
   ],
 
   rules: {
-    start: $ => repeat(
+    start: $ => choice(
+      repeat1($.program_definition),
+      $.copybook_definition
+    ),
+
+    // Standalone copybook files (no IDENTIFICATION DIVISION)
+    copybook_definition: $ => repeat1(
       choice(
-        $.program_definition,
-        //optional($.function_definition) //todo
+        seq($.data_description, repeat1('.')),
+        $.copy_statement,
+        $.exec_statement
       )
     ),
 
@@ -1369,14 +1376,14 @@ module.exports = grammar({
     ),
 
     section_header: $ => seq(
-      field('name', choice($._WORD, $.integer)),
+      field('name', choice($.WORD, $.integer)),
       $._SECTION,
       optional($._LITERAL),
       '.'
     ),
 
     paragraph_header: $ => seq(
-      field('name', choice($._WORD, $.integer)),
+      field('name', choice($.WORD, $.integer)),
       '.'
     ),
 

@@ -14,13 +14,15 @@ go
     (identification_division
       (program_name))
     (procedure_division
-      (paragraph_header)
+      (paragraph_header
+        name: (WORD))
       (goto_statement
         to: (label
           (qualified_word
             (WORD))))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 go to
@@ -38,13 +40,15 @@ go to
     (identification_division
       (program_name))
     (procedure_division
-      (paragraph_header)
+      (paragraph_header
+        name: (WORD))
       (goto_statement
         to: (label
           (qualified_word
             (WORD))))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 go to depending
@@ -82,8 +86,10 @@ go to depending
         depending: (qualified_word
           (WORD)))
       (period)
-      (paragraph_header)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 go to depending on
@@ -121,8 +127,10 @@ go to depending on
         depending: (qualified_word
           (WORD)))
       (period)
-      (paragraph_header)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 go string
@@ -140,12 +148,14 @@ go string
     (identification_division
       (program_name))
     (procedure_division
-      (paragraph_header)
+      (paragraph_header
+        name: (WORD))
       (goto_statement
         to: (label
           (string)))
       (period)
-      (paragraph_header))))
+      (paragraph_header
+        name: (WORD)))))
 
 ====================================
 go string of string
@@ -164,11 +174,14 @@ go string of string
     (identification_division
       (program_name))
     (procedure_division
-      (paragraph_header)
+      (paragraph_header
+        name: (WORD))
       (goto_statement
         to: (label
           (string)
           (string)))
       (period)
-      (section_header)
-      (paragraph_header))))
+      (section_header
+        name: (WORD))
+      (paragraph_header
+        name: (WORD)))))

@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "version": "0.1.0",
+    "license": "MIT"
+  },
+  "grammars": [
+    {
+      "name": "COBOL",
+      "camelcase": "COBOL",
+      "scope": "source.cobol",
+      "path": ".",
+      "file-types": ["cbl", "cob", "cpy", "CBL", "COB", "CPY"]
+    }
+  ]
+}
