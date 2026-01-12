@@ -21,7 +21,7 @@ static bool is_white_space(int c) {
 const int number_of_comment_entry_keywords = 9;
 char* any_content_keyword[] = {
     "author",
-    "installlation",
+    "installation",
     "date-written",
     "date-compiled",
     "security",

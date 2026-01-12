@@ -26,8 +26,6 @@ module.exports = grammar({
     $._LINE_PREFIX_COMMENT,
     $._LINE_SUFFIX_COMMENT,
     $._LINE_COMMENT,
-    $._LINE_COMMENT_ALIAS,
-    $.copy_statement,
     $.comment,
   ],
 
@@ -141,8 +139,10 @@ module.exports = grammar({
       $._ENVIRONMENT,
       $._DIVISION,
       '.',
-      optional($.configuration_section),
-      optional($.input_output_section),
+      optional(choice(
+        seq(optional($.configuration_section), optional($.input_output_section)),
+        $.copy_statement  // COPY can provide entire environment division content
+      )),
     ),
 
     configuration_section: $ => seq(
@@ -731,10 +731,19 @@ module.exports = grammar({
       )
     ),
 
-    file_description: $ => seq(
-      $.file_type,
-      $.file_description_entry,
-      $.record_description_list
+    file_description: $ => choice(
+      seq(
+        $.file_type,
+        $.file_description_entry,
+        $.record_description_list
+      ),
+      // FD name COPY book. - COPY may be followed by additional record descriptions
+      seq(
+        $.file_type,
+        $.WORD,
+        $.copy_statement,
+        optional($.record_description_list)
+      )
     ),
 
     file_type: $ => choice(
@@ -869,13 +878,24 @@ module.exports = grammar({
       seq($._REPORTS, optional($._ARE), field('name', $.WORD)),
     ),
 
-    record_description_list: $ => seq(
-      repeat1(seq($.data_description, repeat1('.')))
+    record_description_list: $ => repeat1(
+      choice(
+        seq($.data_description, repeat1('.')),
+        // level [name] COPY book. [clauses]. - COPY may be followed by additional clauses
+        seq($.level_number, optional($.entry_name), $._copy_clause,
+            repeat($._data_description_clause), '.'),
+        $.copy_statement
+      )
     ),
 
     working_storage_section: $ => seq(
       $._WORKING_STORAGE, $._SECTION, '.',
-      repeat(seq($.data_description, repeat1('.')))
+      repeat(choice(
+        seq($.data_description, repeat1('.')),
+        seq($.level_number, optional($.entry_name), $._copy_clause,
+            repeat($._data_description_clause), '.'),
+        $.copy_statement
+      ))
     ),
 
     data_description: $ => choice(
@@ -1373,6 +1393,7 @@ module.exports = grammar({
       $.close_statement,
       $.continue_statement,
       $.compute_statement,
+      $.copy_statement,
       $.delete_statement,
       $.display_statement,
       $.divide_statement,
@@ -1452,7 +1473,14 @@ module.exports = grammar({
       $.else_header,
     ),
 
+    // COPY with period - used as standalone statement
     copy_statement: $ => seq(
+      $._copy_clause,
+      '.'
+    ),
+
+    // COPY without period - used inline where more content may follow
+    _copy_clause: $ => prec.right(seq(
       $._COPY,
       field('book', optional(choice($.WORD, $.string))),
       field('lib_name', optional(seq(
@@ -1461,8 +1489,7 @@ module.exports = grammar({
       ),
       field('supress', optional($.SUPPRESS)),
       optional($.replacing_clause),
-      '.'
-    ),
+    )),
 
     replacing_clause: $ => seq(
       field('leading_or_trailing', optional(choice($.LEADING, $.TRAILING))),
