@@ -8,6 +8,7 @@ enum TokenType {
     LINE_COMMENT,
     COMMENT_ENTRY,
     multiline_string,
+    EXEC_BLOCK,
 };
 
 void *tree_sitter_COBOL_external_scanner_create() {
@@ -85,6 +86,89 @@ static bool start_with_word( TSLexer *lexer, char *words[], int number_of_words)
         lexer->advance(lexer, true);
     }
 
+    return false;
+}
+
+// Case-insensitive character match
+static bool char_eq_i(int c, char expected) {
+    return towlower(c) == towlower(expected);
+}
+
+// Try to match a keyword case-insensitively, advancing lexer if matched
+static bool match_keyword(TSLexer *lexer, const char *keyword) {
+    for (const char *p = keyword; *p; p++) {
+        if (!char_eq_i(lexer->lookahead, *p)) {
+            return false;
+        }
+        lexer->advance(lexer, false);
+    }
+    return true;
+}
+
+// Scan EXEC ... END-EXEC block
+static bool scan_exec_block(TSLexer *lexer) {
+    // Must start with EXEC
+    if (!char_eq_i(lexer->lookahead, 'E')) {
+        return false;
+    }
+
+    // Try to match EXEC
+    if (!match_keyword(lexer, "EXEC")) {
+        return false;
+    }
+
+    // Must be followed by whitespace
+    if (!iswspace(lexer->lookahead)) {
+        return false;
+    }
+
+    // Skip whitespace
+    while (iswspace(lexer->lookahead)) {
+        lexer->advance(lexer, false);
+    }
+
+    // Check for known EXEC types: SQL, CICS, DLI
+    // We accept any word after EXEC, but these are the common ones
+    bool found_type = false;
+    if (char_eq_i(lexer->lookahead, 'S') ||
+        char_eq_i(lexer->lookahead, 'C') ||
+        char_eq_i(lexer->lookahead, 'D')) {
+        found_type = true;
+    }
+
+    if (!found_type) {
+        return false;
+    }
+
+    // Now scan until END-EXEC
+    // We need to find END-EXEC (case insensitive)
+    int end_exec_state = 0;  // Tracks matching "END-EXEC"
+    const char *end_exec = "END-EXEC";
+
+    while (lexer->lookahead != 0) {
+        char c = lexer->lookahead;
+
+        // Try to match END-EXEC
+        if (char_eq_i(c, end_exec[end_exec_state])) {
+            end_exec_state++;
+            if (end_exec[end_exec_state] == 0) {
+                // Matched END-EXEC
+                lexer->advance(lexer, false);
+                lexer->mark_end(lexer);
+                lexer->result_symbol = EXEC_BLOCK;
+                return true;
+            }
+        } else if (char_eq_i(c, 'E')) {
+            // Could be start of END-EXEC
+            end_exec_state = 1;
+        } else {
+            end_exec_state = 0;
+        }
+
+        lexer->advance(lexer, false);
+    }
+
+    // Hit EOF without finding END-EXEC
     return false;
 }
 
@@ -190,6 +274,12 @@ bool tree_sitter_COBOL_external_scanner_scan(void *payload, TSLexer *lexer,
             while(lexer->lookahead == ' ' && lexer->get_column(lexer) < 72) {
                 lexer->advance(lexer, true);
             }
+        }
+    }
+
+    if(valid_symbols[EXEC_BLOCK]) {
+        if(scan_exec_block(lexer)) {
+            return true;
         }
     }
 

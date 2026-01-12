@@ -19,6 +19,7 @@ module.exports = grammar({
     $._LINE_COMMENT,
     $.comment_entry,
     $._multiline_string,
+    $.exec_statement,
   ],
 
   extras: $ => [
@@ -884,7 +885,8 @@ module.exports = grammar({
         // level [name] COPY book. [clauses]. - COPY may be followed by additional clauses
         seq($.level_number, optional($.entry_name), $._copy_clause,
             repeat($._data_description_clause), '.'),
-        $.copy_statement
+        $.copy_statement,
+        $.exec_statement
       )
     ),
 
@@ -894,7 +896,8 @@ module.exports = grammar({
         seq($.data_description, repeat1('.')),
         seq($.level_number, optional($.entry_name), $._copy_clause,
             repeat($._data_description_clause), '.'),
-        $.copy_statement
+        $.copy_statement,
+        $.exec_statement
       ))
     ),
 
@@ -1397,6 +1400,7 @@ module.exports = grammar({
       $.delete_statement,
       $.display_statement,
       $.divide_statement,
+      $.exec_statement,
       $.exit_statement,
       $.goback_statement,
       $.goto_statement,

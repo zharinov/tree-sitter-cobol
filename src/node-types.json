@@ -9327,6 +9327,10 @@
           "named": true
         },
         {
+          "type": "exec_statement",
+          "named": true
+        },
+        {
           "type": "exit_statement",
           "named": true
         },
@@ -9655,6 +9659,10 @@
         },
         {
           "type": "evaluate_header",
+          "named": true
+        },
+        {
+          "type": "exec_statement",
           "named": true
         },
         {
@@ -10197,6 +10205,10 @@
         },
         {
           "type": "error",
+          "named": true
+        },
+        {
+          "type": "exec_statement",
           "named": true
         },
         {
@@ -14250,6 +14262,10 @@
           "named": true
         },
         {
+          "type": "exec_statement",
+          "named": true
+        },
+        {
           "type": "external_clause",
           "named": true
         },
@@ -14802,6 +14818,10 @@
   },
   {
     "type": "error",
+    "named": true
+  },
+  {
+    "type": "exec_statement",
     "named": true
   },
   {

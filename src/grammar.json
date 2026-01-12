@@ -4515,6 +4515,10 @@
           {
             "type": "SYMBOL",
             "name": "copy_statement"
+          },
+          {
+            "type": "SYMBOL",
+            "name": "exec_statement"
           }
         ]
       }
@@ -4594,6 +4598,10 @@
               {
                 "type": "SYMBOL",
                 "name": "copy_statement"
+              },
+              {
+                "type": "SYMBOL",
+                "name": "exec_statement"
               }
             ]
           }
@@ -7216,6 +7224,10 @@
         {
           "type": "SYMBOL",
           "name": "divide_statement"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "exec_statement"
         },
         {
           "type": "SYMBOL",
@@ -19400,6 +19412,10 @@
     {
       "type": "SYMBOL",
       "name": "_multiline_string"
+    },
+    {
+      "type": "SYMBOL",
+      "name": "exec_statement"
     }
   ],
   "inline": [],
