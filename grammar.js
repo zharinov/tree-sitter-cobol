@@ -10,7 +10,7 @@ function nonempty(pattern1, pattern2) {
 }
 
 module.exports = grammar({
-  name: 'COBOL',
+  name: 'cobol',
   word: $ => $._WORD,
   externals: $ => [
     $._WHITE_SPACES,
