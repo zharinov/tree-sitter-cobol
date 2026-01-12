@@ -14,22 +14,29 @@ PIC X
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))))
     (procedure_division)))

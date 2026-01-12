@@ -9,7 +9,8 @@
       "camelcase": "COBOL",
       "scope": "source.cobol",
       "path": ".",
-      "file-types": ["cbl", "cob", "cpy", "CBL", "COB", "CPY"]
+      "file-types": ["cbl", "cob", "cpy", "CBL", "COB", "CPY"],
+      "highlights": "queries/highlights.scm"
     }
   ]
 }

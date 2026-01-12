@@ -59,7 +59,7 @@ module.exports = grammar({
     )),
 
     identification_division: $ => seq(
-      $._IDENTIFICATION, $._DIVISION, '.',
+      $.IDENTIFICATION, $.DIVISION, '.',
       optional(
         seq($._PROGRAM_ID, '.',
           $.program_name,
@@ -429,7 +429,7 @@ module.exports = grammar({
     ),
 
     select_statement: $ => seq(
-      $._SELECT,
+      $.SELECT,
       field('optional', optional($.OPTIONAL)),
       field('file_name', $.WORD),
       repeat($._select_clause),
@@ -538,7 +538,7 @@ module.exports = grammar({
     ),
 
     assign_clause: $ => seq(
-      $._ASSIGN,
+      $.ASSIGN,
       optional($._TO),
       field('external_or_dynamic', optional($._ext_clause)),
       field('to', choice(
@@ -713,7 +713,7 @@ module.exports = grammar({
     ),
 
     data_division: $ => seq(
-      $._DATA, $._DIVISION, '.',
+      $.DATA, $.DIVISION, '.',
       optional($.file_section),
       optional($.working_storage_section),
       optional($.local_storage_section),
@@ -1086,7 +1086,7 @@ module.exports = grammar({
     ),
 
     picture_clause: $ => seq(
-      choice($._PICTURE, $._PIC),
+      choice($.PICTURE, $.PIC),
       optional($._IS),
       $._picture_string
     ),
@@ -1169,7 +1169,7 @@ module.exports = grammar({
     ),
 
     occurs_clause: $ => seq(
-      $._OCCURS,
+      $.OCCURS,
       field('num', $.integer),
       field('to', optional(seq($._TO, $.integer))),
       optional($._TIMES),
@@ -1510,7 +1510,7 @@ module.exports = grammar({
     ),
 
     start_statement: $ => seq(
-      $._START,
+      $.START,
       field('file_name', $.WORD),
       optional($.start_key),
     ),
@@ -1530,21 +1530,21 @@ module.exports = grammar({
 
     stop_statement: $ => choice(
       seq(
-        $._STOP,
-        $._RUN,
+        $.STOP,
+        $.RUN,
         optional(choice(
           field('returning', seq($._RETURNING, $._x)),
           field('giving', seq($._GIVING, $._x))
         ))
       ),
       seq(
-        $._STOP,
+        $.STOP,
         field('x', $._simple_value),
       )
     ),
 
     accept_statement: $ => seq(
-      $._ACCEPT,
+      $.ACCEPT,
       $._accept_body,
     ),
 
@@ -1620,7 +1620,7 @@ module.exports = grammar({
     ),
 
     add_statement: $ => seq(
-      $._ADD,
+      $.ADD,
       $._add_body,
     ),
 
@@ -1701,7 +1701,7 @@ module.exports = grammar({
     ),
 
     _call_header: $ => seq(
-      $._CALL,
+      $.CALL,
       field('x', $._id_or_lit_or_func),
       field('using', optional(seq(
         $._USING,
@@ -1773,18 +1773,18 @@ module.exports = grammar({
     ),
 
     cancel_statement: $ => seq(
-      $._CANCEL,
+      $.CANCEL,
       field('all', optional($.ALL)),
       repeat($._id_or_lit)
     ),
 
     close_statement: $ => seq(
-      $._CLOSE,
+      $.CLOSE,
       repeat1($.close_arg),
     ),
 
     compute_statement: $ => seq(
-      $._COMPUTE,
+      $.COMPUTE,
       field('left', repeat1($.arithmetic_x)),
       choice('=', $._EQUAL),
       field('right', $.expr),
@@ -1809,16 +1809,16 @@ module.exports = grammar({
       $.REMOVAL
     ),
 
-    continue_statement: $ => $._CONTINUE,
+    continue_statement: $ => $.CONTINUE,
 
     delete_statement: $ => seq(
-      $._DELETE,
+      $.DELETE,
       field('file_name', $.WORD),
       optional(choice($._RECORD, $._RECORDS)),
     ),
 
     display_statement: $ => seq(
-      $._DISPLAY,
+      $.DISPLAY,
       $._display_body,
     ),
 
@@ -1908,7 +1908,7 @@ module.exports = grammar({
     line_or_lines: $ => choice($.LINE, $.LINES),
 
     divide_statement: $ => seq(
-      $._DIVIDE,
+      $.DIVIDE,
       $._divide_body,
     ),
 
@@ -1924,7 +1924,7 @@ module.exports = grammar({
     ),
 
     evaluate_header: $ => prec.right(seq(
-      $._EVALUATE,
+      $.EVALUATE,
       sepBy($.evaluate_subject, optional($._ALSO)),
     )),
 
@@ -1934,7 +1934,7 @@ module.exports = grammar({
       $.FALSE,
     ),
 
-    when: $ => prec.right(repeat1(seq($._WHEN, $._evaluate_object_list))),
+    when: $ => prec.right(repeat1(seq($.WHEN, $._evaluate_object_list))),
 
     _evaluate_object_list: $ => prec.right(sepBy($._evaluate_object, optional($._ALSO))),
 
@@ -1945,10 +1945,10 @@ module.exports = grammar({
       $.FALSE
     ),
 
-    when_other: $ => $._WHEN_OTHER,
+    when_other: $ => $.WHEN_OTHER,
 
     exit_statement: $ => prec.left(seq(
-      $._EXIT,
+      $.EXIT,
       optional(choice(
         $.PROGRAM,
         $.PERFORM,
@@ -1958,10 +1958,10 @@ module.exports = grammar({
       ))
     )),
 
-    goback_statement: $ => $._GOBACK,
+    goback_statement: $ => $.GOBACK,
 
     goto_statement: $ => seq(
-      $._GO, optional($._TO),
+      $.GO, optional($._TO),
       field('to', repeat($.label)),
       field('depending', optional(seq($._DEPENDING, optional($._ON), $._identifier)))
     ),
@@ -1973,18 +1973,18 @@ module.exports = grammar({
 
 
     if_header: $ => prec(1, seq(
-      $._IF,
+      $.IF,
       field('condition', choice($.expr)),
-      optional($._THEN),
+      optional($.THEN),
     )),
 
     else_if_header: $ => prec.right(1, seq(
-      $._ELSE, $._IF,
+      $.ELSE, $._IF,
       field('condition', choice($.expr)),
-      optional($._THEN),
+      optional($.THEN),
     )),
 
-    else_header: $ => $._ELSE,
+    else_header: $ => $.ELSE,
 
     expr: $ => prec.left(choice(
       seq($.NOT, $.expr),
@@ -2131,7 +2131,7 @@ module.exports = grammar({
     ),
 
     initialize_statement: $ => seq(
-      $._INITIALIZE,
+      $.INITIALIZE,
       field('x', repeat1($._target_x)),
       field('filler', optional(seq(optional($._WITH), $.FILLER))),
       field('value', optional(choice(
@@ -2173,7 +2173,7 @@ module.exports = grammar({
     ),
 
     inspect_statement: $ => seq(
-      $._INSPECT,
+      $.INSPECT,
       field('send', choice(
         $._identifier,
         $._literal,
@@ -2246,12 +2246,12 @@ module.exports = grammar({
     ),
 
     merge_statement: $ => seq(
-      $._MERGE,
+      $.MERGE,
       $._sort_body
     ),
 
     move_statement: $ => seq(
-      $._MOVE,
+      $.MOVE,
       $._move_body
     ),
 
@@ -2292,7 +2292,7 @@ module.exports = grammar({
     ),
 
     multiply_statement: $ => seq(
-      $._MULTIPLY,
+      $.MULTIPLY,
       $._multiply_body,
     ),
 
@@ -2312,7 +2312,7 @@ module.exports = grammar({
     ),
 
     open_statement: $ => seq(
-      $._OPEN,
+      $.OPEN,
       repeat1($.open_arg)
     ),
 
@@ -2335,13 +2335,13 @@ module.exports = grammar({
     ),
 
     perform_statement_call_proc: $ => seq(
-      $._PERFORM,
+      $.PERFORM,
       field('procedure', $.perform_procedure),
       field('option', optional($.perform_option)),
     ),
 
     perform_statement_loop: $ => seq(
-      $._PERFORM,
+      $.PERFORM,
       field('option', optional($.perform_option)),
     ),
 
@@ -2415,28 +2415,28 @@ module.exports = grammar({
     ),
 
     return_statement: $ => seq(
-      $._RETURN,
+      $.RETURN,
       field('file_name', $.WORD),
       optional($._RECORD),
       field('into', optional(seq($._INTO, $._identifier)))
     ),
 
     rewrite_statement: $ => seq(
-      $._REWRITE,
+      $.REWRITE,
       field('record', $.qualified_word),
       field('from', optional(seq($._FROM, $._id_or_lit))),
       field('lock', optional(choice($.write_lock, $.write_no_lock))),
     ),
 
     search_statement: $ => seq(
-      $._SEARCH,
+      $.SEARCH,
       optional(field('all', $.ALL)),
       field('table_name', $.qualified_word),
       field('varying', optional(seq($.VARYING, $._identifier)))
     ),
 
     set_statement: $ => seq(
-      $._SET,
+      $.SET,
       choice(
         $.set_environment,
         $.set_to,
@@ -2553,7 +2553,7 @@ module.exports = grammar({
     ),
 
     string_statement: $ => seq(
-      $._STRING,
+      $.STRING,
       field('from', repeat1($.string_item)),
       $._INTO,
       field('into', $._identifier),
@@ -2572,7 +2572,7 @@ module.exports = grammar({
     ),
 
     subtract_statement: $ => seq(
-      $._SUBTRACT,
+      $.SUBTRACT,
       $._subtract_body,
     ),
 
@@ -2686,7 +2686,7 @@ module.exports = grammar({
     ),
 
     _write_statement_header: $ => seq(
-      $._WRITE,
+      $.WRITE,
       field('record_name', $.qualified_word),
       field('from', optional(seq($._FROM, $._id_or_lit))),
       field('lock', optional(choice($.write_lock, $.write_no_lock))),
@@ -3334,9 +3334,9 @@ module.exports = grammar({
     _ZEROS: $ => choice('zeros', 'ZEROS', 'Zeros', 'zeroes', 'ZEROES', 'Zeroes'),
 
 
-    //ACCEPT: $ => $._ACCEPT,
+    ACCEPT: $ => $._ACCEPT,
     //ACCESS: $ => $._ACCESS,
-    //ADD: $ => $._ADD,
+    ADD: $ => $._ADD,
     //ADDRESS: $ => $._ADDRESS,
     ADVANCING: $ => $._ADVANCING,
     AFTER: $ => $._AFTER,
@@ -3360,7 +3360,7 @@ module.exports = grammar({
     ARGUMENT_VALUE: $ => $._ARGUMENT_VALUE,
     //AS: $ => $._AS,
     ASCENDING: $ => $._ASCENDING,
-    //ASSIGN: $ => $._ASSIGN,
+    ASSIGN: $ => $._ASSIGN,
     //AT: $ => $._AT,
     AUTO: $ => $._AUTO,
     AUTOMATIC: $ => $._AUTOMATIC,
@@ -3382,15 +3382,15 @@ module.exports = grammar({
     //BOTTOM: $ => $._BOTTOM,
     BY: $ => $._BY,
     //BYTE_LENGTH: $ => $._BYTE_LENGTH,
-    //CALL: $ => $._CALL,
-    //CANCEL: $ => $._CANCEL,
+    CALL: $ => $._CALL,
+    CANCEL: $ => $._CANCEL,
     //CH: $ => $._CH,
     CHAINING: $ => $._CHAINING,
     //CHARACTER: $ => $._CHARACTER,
     CHARACTERS: $ => $._CHARACTERS,
     //CLASS: $ => $._CLASS,
     CLASS_NAME: $ => $._CLASS_NAME,
-    //CLOSE: $ => $._CLOSE,
+    CLOSE: $ => $._CLOSE,
     //CLOSE_NOFEED: $ => $._CLOSE_NOFEED,
     //CODE: $ => $._CODE,
     //CODE_SET: $ => $._CODE_SET,
@@ -3406,7 +3406,7 @@ module.exports = grammar({
     COMMITMENT_CONTROL: $ => $._COMMITMENT_CONTROL,
     //COMMON: $ => $._COMMON,
     COMP: $ => $._COMP,
-    //COMPUTE: $ => $._COMPUTE,
+    COMPUTE: $ => $._COMPUTE,
     COMP_1: $ => $._COMP_1,
     COMP_2: $ => $._COMP_2,
     COMP_3: $ => $._COMP_3,
@@ -3418,7 +3418,7 @@ module.exports = grammar({
     //CONSTANT: $ => $._CONSTANT,
     //CONTAINS: $ => $._CONTAINS,
     //CONTENT: $ => $._CONTENT,
-    //CONTINUE: $ => $._CONTINUE,
+    CONTINUE: $ => $._CONTINUE,
     //CONTROL: $ => $._CONTROL,
     //CONTROLS: $ => $._CONTROLS,
     //CONTROL_FOOTING: $ => $._CONTROL_FOOTING,
@@ -3433,7 +3433,7 @@ module.exports = grammar({
     //CURSOR: $ => $._CURSOR,
     CYCLE: $ => $._CYCLE,
     //CYL_OVERFLOW: $ => $._CYL_OVERFLOW,
-    //DATA: $ => $._DATA,
+    DATA: $ => $._DATA,
     DATE: $ => $._DATE,
     DAY: $ => $._DAY,
     DAY_OF_WEEK: $ => $._DAY_OF_WEEK,
@@ -3442,7 +3442,7 @@ module.exports = grammar({
     //DECIMAL_POINT: $ => $._DECIMAL_POINT,
     //DECLARATIVES: $ => $._DECLARATIVES,
     DEFAULT: $ => $._DEFAULT,
-    //DELETE: $ => $._DELETE,
+    DELETE: $ => $._DELETE,
     DELIMITED: $ => $._DELIMITED,
     //DELIMITER: $ => $._DELIMITER,
     //DEPENDING: $ => $._DEPENDING,
@@ -3450,13 +3450,13 @@ module.exports = grammar({
     //DETAIL: $ => $._DETAIL,
     DISK: $ => $._DISK,
     DISPLAY: $ => $._DISPLAY,
-    //DIVIDE: $ => $._DIVIDE,
-    //DIVISION: $ => $._DIVISION,
+    DIVIDE: $ => $._DIVIDE,
+    DIVISION: $ => $._DIVISION,
     DOWN: $ => $._DOWN,
     DUPLICATES: $ => $._DUPLICATES,
     DYNAMIC: $ => $._DYNAMIC,
     EBCDIC: $ => $._EBCDIC,
-    //ELSE: $ => $._ELSE,
+    ELSE: $ => $._ELSE,
     //END: $ => $._END,
     END_ACCEPT: $ => $._END_ACCEPT,
     END_ADD: $ => $._END_ADD,
@@ -3493,11 +3493,11 @@ module.exports = grammar({
     ERASE: $ => $._ERASE,
     //ERROR: $ => $._ERROR,
     ESCAPE: $ => $._ESCAPE,
-    //EVALUATE: $ => $._EVALUATE,
+    EVALUATE: $ => $._EVALUATE,
     //EVENT_STATUS: $ => $._EVENT_STATUS,
     EXCEPTION: $ => $._EXCEPTION,
     EXCLUSIVE: $ => $._EXCLUSIVE,
-    //EXIT: $ => $._EXIT,
+    EXIT: $ => $._EXIT,
     EXTEND: $ => $._EXTEND,
     EXTERNAL: $ => $._EXTERNAL,
     FD: $ => $._FD,
@@ -3521,27 +3521,27 @@ module.exports = grammar({
     //GENERATE: $ => $._GENERATE,
     //GIVING: $ => $._GIVING,
     GLOBAL: $ => $._GLOBAL,
-    //GO: $ => $._GO,
-    //GOBACK: $ => $._GOBACK,
+    GO: $ => $._GO,
+    GOBACK: $ => $._GOBACK,
     //GREATER: $ => $._GREATER,
     //GROUP: $ => $._GROUP,
     //HEADING: $ => $._HEADING,
     HIGHLIGHT: $ => $._HIGHLIGHT,
     HIGH_VALUE: $ => $._HIGH_VALUE,
-    //IDENTIFICATION: $ => $._IDENTIFICATION,
-    //IF: $ => $._IF,
+    IDENTIFICATION: $ => $._IDENTIFICATION,
+    IF: $ => $._IF,
     IGNORE: $ => $._IGNORE,
     //IGNORING: $ => $._IGNORING,
     //IN: $ => $._IN,
     INDEX: $ => $._INDEX,
     INDEXED: $ => $._INDEXED,
     //INDICATE: $ => $._INDICATE,
-    //INITIALIZE: $ => $._INITIALIZE,
+    INITIALIZE: $ => $._INITIALIZE,
     INITIALIZED: $ => $._INITIALIZED,
     //INITIATE: $ => $._INITIATE,
     INPUT: $ => $._INPUT,
     //INPUT_OUTPUT: $ => $._INPUT_OUTPUT,
-    //INSPECT: $ => $._INSPECT,
+    INSPECT: $ => $._INSPECT,
     //INTO: $ => $._INTO,
     //INTRINSIC: $ => $._INTRINSIC,
     //INVALID: $ => $._INVALID,
@@ -3578,13 +3578,13 @@ module.exports = grammar({
     LOW_VALUE: $ => $._LOW_VALUE,
     MANUAL: $ => $._MANUAL,
     //MEMORY: $ => $._MEMORY,
-    //MERGE: $ => $._MERGE,
+    MERGE: $ => $._MERGE,
     //MINUS: $ => $._MINUS,
     MNEMONIC_NAME: $ => $._MNEMONIC_NAME,
     //MODE: $ => $._MODE,
-    //MOVE: $ => $._MOVE,
+    MOVE: $ => $._MOVE,
     MULTIPLE: $ => $._MULTIPLE,
-    //MULTIPLY: $ => $._MULTIPLY,
+    MULTIPLY: $ => $._MULTIPLY,
     NATIONAL: $ => $._NATIONAL,
     NATIONAL_EDITED: $ => $._NATIONAL_EDITED,
     NATIVE: $ => $._NATIVE,
@@ -3608,13 +3608,13 @@ module.exports = grammar({
     NUMERIC_EDITED: $ => $._NUMERIC_EDITED,
     NUMVALC_FUNC: $ => $._NUMVALC_FUNC,
     //OBJECT_COMPUTER: $ => $._OBJECT_COMPUTER,
-    //OCCURS: $ => $._OCCURS,
+    OCCURS: $ => $._OCCURS,
     //OF: $ => $._OF,
     OFF: $ => $._OFF,
     OMITTED: $ => $._OMITTED,
     ON: $ => $._ON,
     ONLY: $ => $._ONLY,
-    //OPEN: $ => $._OPEN,
+    OPEN: $ => $._OPEN,
     OPTIONAL: $ => $._OPTIONAL,
     OR: $ => $._OR,
     //ORDER: $ => $._ORDER,
@@ -3630,8 +3630,8 @@ module.exports = grammar({
     //PAGE_HEADING: $ => $._PAGE_HEADING,
     PARAGRAPH: $ => $._PARAGRAPH,
     PERFORM: $ => $._PERFORM,
-    //PIC: $ => $._PIC,
-    //PICTURE: $ => $._PICTURE,
+    PIC: $ => $._PIC,
+    PICTURE: $ => $._PICTURE,
     //PLUS: $ => $._PLUS,
     POINTER: $ => $._POINTER,
     POSITION: $ => $._POSITION,
@@ -3673,32 +3673,32 @@ module.exports = grammar({
     //REPOSITORY: $ => $._REPOSITORY,
     REQUIRED: $ => $._REQUIRED,
     //RESERVE: $ => $._RESERVE,
-    //RETURN: $ => $._RETURN,
+    RETURN: $ => $._RETURN,
     //RETURNING: $ => $._RETURNING,
     REVERSE_FUNC: $ => $._REVERSE_FUNC,
     REVERSE_VIDEO: $ => $._REVERSE_VIDEO,
     REWIND: $ => $._REWIND,
-    //REWRITE: $ => $._REWRITE,
+    REWRITE: $ => $._REWRITE,
     RIGHT: $ => $._RIGHT,
     //ROLLBACK: $ => $._ROLLBACK,
     ROUNDED: $ => $._ROUNDED,
-    //RUN: $ => $._RUN,
+    RUN: $ => $._RUN,
     //SAME: $ => $._SAME,
     //SCREEN: $ => $._SCREEN,
     //SCREEN_CONTROL: $ => $._SCREEN_CONTROL,
     SCROLL: $ => $._SCROLL,
     SD: $ => $._SD,
-    //SEARCH: $ => $._SEARCH,
+    SEARCH: $ => $._SEARCH,
     SECTION: $ => $._SECTION,
     //SECURE: $ => $._SECURE,
     //SEGMENT_LIMIT: $ => $._SEGMENT_LIMIT,
-    //SELECT: $ => $._SELECT,
+    SELECT: $ => $._SELECT,
     //SEMI_COLON: $ => $._SEMI_COLON,
     //SENTENCE: $ => $._SENTENCE,
     SEPARATE: $ => $._SEPARATE,
     //SEQUENCE: $ => $._SEQUENCE,
     SEQUENTIAL: $ => $._SEQUENTIAL,
-    //SET: $ => $._SET,
+    SET: $ => $._SET,
     //SHARING: $ => $._SHARING,
     //SIGN: $ => $._SIGN,
     SIGNED: $ => $._SIGNED,
@@ -3716,13 +3716,13 @@ module.exports = grammar({
     STANDARD: $ => $._STANDARD,
     STANDARD_1: $ => $._STANDARD_1,
     STANDARD_2: $ => $._STANDARD_2,
-    //START: $ => $._START,
+    START: $ => $._START,
     //STATUS: $ => $._STATUS,
-    //STOP: $ => $._STOP,
-    //STRING: $ => $._STRING,
+    STOP: $ => $._STOP,
+    STRING: $ => $._STRING,
     SUBSTITUTE_FUNC: $ => $._SUBSTITUTE_FUNC,
     SUBSTITUTE_CASE_FUNC: $ => $._SUBSTITUTE_CASE_FUNC,
-    //SUBTRACT: $ => $._SUBTRACT,
+    SUBTRACT: $ => $._SUBTRACT,
     //SUM: $ => $._SUM,
     SUPPRESS: $ => $._SUPPRESS,
     //SYMBOLIC: $ => $._SYMBOLIC,
@@ -3732,7 +3732,7 @@ module.exports = grammar({
     //TERMINATE: $ => $._TERMINATE,
     //TEST: $ => $._TEST,
     //THAN: $ => $._THAN,
-    //THEN: $ => $._THEN,
+    THEN: $ => $._THEN,
     THRU: $ => $._THRU,
     TIME: $ => $._TIME,
     //TIMES: $ => $._TIMES,
@@ -3771,14 +3771,14 @@ module.exports = grammar({
     VALUE: $ => $._VALUE,
     VARYING: $ => $._VARYING,
     WAIT: $ => $._WAIT,
-    //WHEN: $ => $._WHEN,
+    WHEN: $ => $._WHEN,
     WHEN_COMPILED_FUNC: $ => $._WHEN_COMPILED_FUNC,
-    //WHEN_OTHER: $ => $._WHEN_OTHER,
+    WHEN_OTHER: $ => $._WHEN_OTHER,
     //WITH: $ => $._WITH,
     WORD: $ => $._WORD,
     WORDS: $ => $._WORDS,
     //WORKING_STORAGE: $ => $._WORKING_STORAGE,
-    //WRITE: $ => $._WRITE,
+    WRITE: $ => $._WRITE,
     YYYYDDD: $ => $._YYYYDDD,
     YYYYMMDD: $ => $._YYYYMMDD,
     ZERO: $ => $._ZERO,

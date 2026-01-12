@@ -12,11 +12,14 @@ go
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (paragraph_header
         name: (WORD))
       (goto_statement
+        (GO)
         to: (label
           (qualified_word
             (WORD))))
@@ -38,11 +41,14 @@ go to
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (paragraph_header
         name: (WORD))
       (goto_statement
+        (GO)
         to: (label
           (qualified_word
             (WORD))))
@@ -67,16 +73,22 @@ go to depending
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_9)))))
     (procedure_division
       (goto_statement
+        (GO)
         to: (label
           (qualified_word
             (WORD)))
@@ -108,16 +120,22 @@ go to depending on
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_9)))))
     (procedure_division
       (goto_statement
+        (GO)
         to: (label
           (qualified_word
             (WORD)))
@@ -146,11 +164,14 @@ go string
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (paragraph_header
         name: (WORD))
       (goto_statement
+        (GO)
         to: (label
           (string)))
       (period)
@@ -172,11 +193,14 @@ go string of string
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (paragraph_header
         name: (WORD))
       (goto_statement
+        (GO)
         to: (label
           (string)
           (string)))

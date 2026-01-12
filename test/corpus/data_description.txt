@@ -22,14 +22,20 @@ file-section
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (string)))))
     (data_division
+      (DATA)
+      (DIVISION)
       (file_section
         (file_description
           (file_type
@@ -41,20 +47,24 @@ file-section
               (level_number)
               (entry_name)
               (picture_clause
+                (PICTURE)
                 (picture_x)))
             (data_description
               (level_number)
               (entry_name)
               (picture_clause
+                (PICTURE)
                 (picture_x))))))
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PICTURE)
             (picture_9)))))
     (procedure_division
       (display_statement
+        (DISPLAY)
         (number
           (integer)))
       (period))))
@@ -73,13 +83,18 @@ value clause
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PICTURE)
             (picture_9))
           (value_clause
             (value_item
@@ -101,13 +116,18 @@ picture decimal
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PICTURE)
             (picture_9))
           (value_clause
             (value_item
@@ -129,13 +149,18 @@ computational
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PICTURE)
             (picture_9))
           (usage_clause
             (COMPUTATIONAL)))))

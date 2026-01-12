@@ -1,5 +1,15 @@
 [
   {
+    "type": "ACCEPT",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ADD",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "ADVANCING",
     "named": true,
     "fields": {}
@@ -66,6 +76,11 @@
   },
   {
     "type": "ASCENDING",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ASSIGN",
     "named": true,
     "fields": {}
   },
@@ -145,6 +160,16 @@
     "fields": {}
   },
   {
+    "type": "CALL",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "CANCEL",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "CHAINING",
     "named": true,
     "fields": {}
@@ -156,6 +181,11 @@
   },
   {
     "type": "CLASS_NAME",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "CLOSE",
     "named": true,
     "fields": {}
   },
@@ -176,6 +206,11 @@
   },
   {
     "type": "COMPUTATIONAL",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "COMPUTE",
     "named": true,
     "fields": {}
   },
@@ -215,6 +250,11 @@
     "fields": {}
   },
   {
+    "type": "CONTINUE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "CORRESPONDING",
     "named": true,
     "fields": {}
@@ -231,6 +271,11 @@
   },
   {
     "type": "CYCLE",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "DATA",
     "named": true,
     "fields": {}
   },
@@ -255,6 +300,11 @@
     "fields": {}
   },
   {
+    "type": "DELETE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "DELIMITED",
     "named": true,
     "fields": {}
@@ -275,6 +325,16 @@
     "fields": {}
   },
   {
+    "type": "DIVIDE",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "DIVISION",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "DOWN",
     "named": true,
     "fields": {}
@@ -291,6 +351,11 @@
   },
   {
     "type": "EBCDIC",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "ELSE",
     "named": true,
     "fields": {}
   },
@@ -425,7 +490,17 @@
     "fields": {}
   },
   {
+    "type": "EVALUATE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "EXCLUSIVE",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "EXIT",
     "named": true,
     "fields": {}
   },
@@ -490,12 +565,32 @@
     "fields": {}
   },
   {
+    "type": "GO",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "GOBACK",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "HIGHLIGHT",
     "named": true,
     "fields": {}
   },
   {
     "type": "HIGH_VALUE",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "IDENTIFICATION",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "IF",
     "named": true,
     "fields": {}
   },
@@ -515,12 +610,22 @@
     "fields": {}
   },
   {
+    "type": "INITIALIZE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "INITIALIZED",
     "named": true,
     "fields": {}
   },
   {
     "type": "INPUT",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "INSPECT",
     "named": true,
     "fields": {}
   },
@@ -621,7 +726,22 @@
     "fields": {}
   },
   {
+    "type": "MERGE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "MNEMONIC_NAME",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "MOVE",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "MULTIPLY",
     "named": true,
     "fields": {}
   },
@@ -676,6 +796,11 @@
     "fields": {}
   },
   {
+    "type": "OCCURS",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "OFF",
     "named": true,
     "fields": {}
@@ -692,6 +817,11 @@
   },
   {
     "type": "ONLY",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "OPEN",
     "named": true,
     "fields": {}
   },
@@ -732,6 +862,16 @@
   },
   {
     "type": "PERFORM",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "PIC",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "PICTURE",
     "named": true,
     "fields": {}
   },
@@ -831,6 +971,11 @@
     "fields": {}
   },
   {
+    "type": "RETURN",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "REVERSE_FUNC",
     "named": true,
     "fields": {}
@@ -846,12 +991,22 @@
     "fields": {}
   },
   {
+    "type": "REWRITE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "RIGHT",
     "named": true,
     "fields": {}
   },
   {
     "type": "ROUNDED",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "RUN",
     "named": true,
     "fields": {}
   },
@@ -866,7 +1021,17 @@
     "fields": {}
   },
   {
+    "type": "SEARCH",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "SECTION",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "SELECT",
     "named": true,
     "fields": {}
   },
@@ -877,6 +1042,11 @@
   },
   {
     "type": "SEQUENTIAL",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "SET",
     "named": true,
     "fields": {}
   },
@@ -941,6 +1111,21 @@
     "fields": {}
   },
   {
+    "type": "START",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "STOP",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "STRING",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "SUBSTITUTE_CASE_FUNC",
     "named": true,
     "fields": {}
@@ -951,7 +1136,17 @@
     "fields": {}
   },
   {
+    "type": "SUBTRACT",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "SUPPRESS",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "THEN",
     "named": true,
     "fields": {}
   },
@@ -1061,7 +1256,17 @@
     "fields": {}
   },
   {
+    "type": "WHEN",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "WHEN_COMPILED_FUNC",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "WHEN_OTHER",
     "named": true,
     "fields": {}
   },
@@ -1072,6 +1277,11 @@
   },
   {
     "type": "WORDS",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "WRITE",
     "named": true,
     "fields": {}
   },
@@ -1178,6 +1388,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "ACCEPT",
+          "named": true
+        },
         {
           "type": "at_line_column",
           "named": true
@@ -1654,9 +1868,13 @@
       }
     },
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
+        {
+          "type": "ADD",
+          "named": true
+        },
         {
           "type": "CORRESPONDING",
           "named": true
@@ -2306,6 +2524,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ASSIGN",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2682,6 +2910,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "CALL",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -2701,10 +2939,14 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "ALL",
+          "named": true
+        },
+        {
+          "type": "CANCEL",
           "named": true
         },
         {
@@ -2924,6 +3166,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "CLOSE",
+          "named": true
+        },
         {
           "type": "close_arg",
           "named": true
@@ -3160,6 +3406,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "COMPUTE",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -3316,7 +3572,17 @@
   {
     "type": "continue_statement",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "CONTINUE",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "copy_statement",
@@ -3565,8 +3831,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "DATA",
+          "named": true
+        },
+        {
+          "type": "DIVISION",
+          "named": true
+        },
         {
           "type": "file_section",
           "named": true
@@ -3660,6 +3934,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "DELETE",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -3771,7 +4055,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "ALL",
@@ -3779,6 +4063,10 @@
         },
         {
           "type": "CRT",
+          "named": true
+        },
+        {
+          "type": "DISPLAY",
           "named": true
         },
         {
@@ -4388,12 +4676,32 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "DIVIDE",
+          "named": true
+        }
+      ]
     }
   },
   {
     "type": "else_header",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "ELSE",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "else_if_header",
@@ -4409,6 +4717,20 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "ELSE",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -4473,6 +4795,10 @@
       "required": true,
       "types": [
         {
+          "type": "EVALUATE",
+          "named": true
+        },
+        {
           "type": "evaluate_subject",
           "named": true
         }
@@ -4523,10 +4849,14 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "CYCLE",
+          "named": true
+        },
+        {
+          "type": "EXIT",
           "named": true
         },
         {
@@ -5437,7 +5767,17 @@
   {
     "type": "goback_statement",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "GOBACK",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "goto_statement",
@@ -5471,6 +5811,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "GO",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -5546,8 +5896,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "DIVISION",
+          "named": true
+        },
+        {
+          "type": "IDENTIFICATION",
+          "named": true
+        },
         {
           "type": "as_literal",
           "named": true
@@ -5601,6 +5959,20 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "IF",
+          "named": true
+        },
+        {
+          "type": "THEN",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -5830,6 +6202,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "INITIALIZE",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -6215,6 +6597,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "INSPECT",
+          "named": true
+        },
         {
           "type": "inspect_converting",
           "named": true
@@ -7172,6 +7558,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "MERGE",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -7364,6 +7760,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "MOVE",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -7835,6 +8241,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "MULTIPLY",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -8164,6 +8580,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "OCCURS",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -8331,6 +8757,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "OPEN",
+          "named": true
+        },
         {
           "type": "open_arg",
           "named": true
@@ -8551,6 +8981,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "PERFORM",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -8567,6 +9007,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "PERFORM",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -8801,9 +9251,17 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "PIC",
+          "named": true
+        },
+        {
+          "type": "PICTURE",
+          "named": true
+        },
         {
           "type": "picture_9",
           "named": true
@@ -11018,6 +11476,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "RETURN",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -11122,6 +11590,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "REWRITE",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -11254,6 +11732,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "SEARCH",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -11345,8 +11833,12 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "SELECT",
+          "named": true
+        },
         {
           "type": "access_mode_clause",
           "named": true
@@ -11564,6 +12056,10 @@
       "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "SET",
+          "named": true
+        },
         {
           "type": "set_environment",
           "named": true
@@ -12373,9 +12869,13 @@
       }
     },
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
+        {
+          "type": "START",
+          "named": true
+        },
         {
           "type": "start_key",
           "named": true
@@ -12621,6 +13121,20 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": true,
+      "required": true,
+      "types": [
+        {
+          "type": "RUN",
+          "named": true
+        },
+        {
+          "type": "STOP",
+          "named": true
+        }
+      ]
     }
   },
   {
@@ -12753,9 +13267,13 @@
       }
     },
     "children": {
-      "multiple": false,
-      "required": false,
+      "multiple": true,
+      "required": true,
       "types": [
+        {
+          "type": "STRING",
+          "named": true
+        },
         {
           "type": "with_pointer",
           "named": true
@@ -13301,7 +13819,7 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "CORRESPONDING",
@@ -13309,6 +13827,10 @@
         },
         {
           "type": "ROUNDED",
+          "named": true
+        },
+        {
+          "type": "SUBTRACT",
           "named": true
         }
       ]
@@ -14001,7 +14523,7 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
         {
           "type": "ANY",
@@ -14016,6 +14538,10 @@
           "named": true
         },
         {
+          "type": "WHEN",
+          "named": true
+        },
+        {
           "type": "expr",
           "named": true
         }
@@ -14025,7 +14551,17 @@
   {
     "type": "when_other",
     "named": true,
-    "fields": {}
+    "fields": {},
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "WHEN_OTHER",
+          "named": true
+        }
+      ]
+    }
   },
   {
     "type": "with_accp_attr",
@@ -14524,6 +15060,16 @@
           }
         ]
       }
+    },
+    "children": {
+      "multiple": false,
+      "required": true,
+      "types": [
+        {
+          "type": "WRITE",
+          "named": true
+        }
+      ]
     }
   },
   {

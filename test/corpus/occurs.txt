@@ -10,11 +10,16 @@ occurs
            05 lv5 pic x.
        procedure division.
 ---
+
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
@@ -23,13 +28,16 @@ occurs
           (level_number)
           (entry_name)
           (occurs_clause
+            (OCCURS)
             num: (integer)))
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))))
     (procedure_division)))
+
 ====================================
 occurs to
 ====================================
@@ -42,11 +50,16 @@ occurs to
            05 lv5 pic x.
        procedure division.
 ---
+
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
@@ -55,14 +68,17 @@ occurs to
           (level_number)
           (entry_name)
           (occurs_clause
+            (OCCURS)
             num: (integer)
             to: (integer)))
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))))
     (procedure_division)))
+
 ====================================
 occurs times
 ====================================
@@ -75,11 +91,16 @@ occurs times
            05 lv5 pic x.
        procedure division.
 ---
+
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
@@ -88,13 +109,16 @@ occurs times
           (level_number)
           (entry_name)
           (occurs_clause
+            (OCCURS)
             num: (integer)))
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))))
     (procedure_division)))
+
 ====================================
 occurs depending
 ====================================
@@ -108,11 +132,16 @@ occurs depending
        01 l pic x.
        procedure division.
 ---
+
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
@@ -121,6 +150,7 @@ occurs depending
           (level_number)
           (entry_name)
           (occurs_clause
+            (OCCURS)
             num: (integer)
             depending: (qualified_word
               (WORD))))
@@ -128,10 +158,12 @@ occurs depending
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_x)))))
     (procedure_division)))

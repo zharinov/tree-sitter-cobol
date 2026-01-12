@@ -11,9 +11,12 @@ perform label
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (perform_statement_call_proc
+        (PERFORM)
         procedure: (perform_procedure
           (label
             (qualified_word
@@ -36,9 +39,12 @@ perform label thru label
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (perform_statement_call_proc
+        (PERFORM)
         procedure: (perform_procedure
           (label
             (qualified_word
@@ -66,9 +72,12 @@ perform label FOREVER
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (perform_statement_call_proc
+        (PERFORM)
         procedure: (perform_procedure
           (label
             (qualified_word
@@ -93,12 +102,16 @@ perform continue
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (perform_statement_loop
+        (PERFORM)
         option: (perform_option
           (FOREVER)))
-      (continue_statement)
+      (continue_statement
+        (CONTINUE))
       (END_PERFORM)
       (period))))
 
@@ -115,9 +128,12 @@ perform label times
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (procedure_division
       (perform_statement_call_proc
+        (PERFORM)
         procedure: (perform_procedure
           (label
             (qualified_word
@@ -145,16 +161,22 @@ perform label UNTIL
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (data_division
+      (DATA)
+      (DIVISION)
       (working_storage_section
         (data_description
           (level_number)
           (entry_name)
           (picture_clause
+            (PIC)
             (picture_9)))))
     (procedure_division
       (perform_statement_call_proc
+        (PERFORM)
         procedure: (perform_procedure
           (label
             (qualified_word

@@ -14,15 +14,20 @@ open input
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (open_statement
+        (OPEN)
         (open_arg
           mode: (INPUT)
           file_name_list: (WORD)))
@@ -44,15 +49,20 @@ open output
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (open_statement
+        (OPEN)
         (open_arg
           mode: (OUTPUT)
           file_name_list: (WORD)))
@@ -74,15 +84,20 @@ open i-o
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (open_statement
+        (OPEN)
         (open_arg
           mode: (I_O)
           file_name_list: (WORD)))
@@ -104,15 +119,20 @@ open extend
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (open_statement
+        (OPEN)
         (open_arg
           mode: (EXTEND)
           file_name_list: (WORD)))
@@ -134,15 +154,20 @@ close
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)))
       (period))))
@@ -163,15 +188,20 @@ close reel
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -194,15 +224,20 @@ close unit
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -225,15 +260,20 @@ close unit removal
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -257,15 +297,20 @@ close unit for removal
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -289,15 +334,20 @@ close unit no rewind
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -321,15 +371,20 @@ close unit with no rewind
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -353,15 +408,20 @@ close unit lock
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
@@ -384,15 +444,20 @@ close unit with lock
 (start
   (program_definition
     (identification_division
+      (IDENTIFICATION)
+      (DIVISION)
       (program_name))
     (environment_division
       (input_output_section
         (select_statement
+          (SELECT)
           file_name: (WORD)
           (assign_clause
+            (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
       (close_statement
+        (CLOSE)
         (close_arg
           file_handler: (WORD)
           (close_option
