@@ -15,6 +15,8 @@ perform label
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (perform_statement_call_proc
         (PERFORM)
         procedure: (perform_procedure
@@ -43,6 +45,8 @@ perform label thru label
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (perform_statement_call_proc
         (PERFORM)
         procedure: (perform_procedure
@@ -76,6 +80,8 @@ perform label FOREVER
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (perform_statement_call_proc
         (PERFORM)
         procedure: (perform_procedure
@@ -106,6 +112,8 @@ perform continue
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (perform_statement_loop
         (PERFORM)
         option: (perform_option
@@ -132,6 +140,8 @@ perform label times
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (perform_statement_call_proc
         (PERFORM)
         procedure: (perform_procedure
@@ -168,6 +178,8 @@ perform label UNTIL
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -175,6 +187,8 @@ perform label UNTIL
             (PIC)
             (picture_9)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (perform_statement_call_proc
         (PERFORM)
         procedure: (perform_procedure

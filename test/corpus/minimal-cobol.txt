@@ -17,6 +17,8 @@ Minimal COBOL program
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (stop_statement
         (STOP)
         (RUN))

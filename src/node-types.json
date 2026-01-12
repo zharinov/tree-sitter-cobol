@@ -250,6 +250,11 @@
     "fields": {}
   },
   {
+    "type": "CONFIGURATION",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "CONTINUE",
     "named": true,
     "fields": {}
@@ -530,6 +535,11 @@
     "fields": {}
   },
   {
+    "type": "FILE_CONTROL",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "FILE_ID",
     "named": true,
     "fields": {}
@@ -625,6 +635,11 @@
     "fields": {}
   },
   {
+    "type": "INPUT_OUTPUT",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "INSPECT",
     "named": true,
     "fields": {}
@@ -665,6 +680,11 @@
     "fields": {}
   },
   {
+    "type": "LINKAGE",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "LITERAL",
     "named": true,
     "fields": {},
@@ -697,6 +717,11 @@
   },
   {
     "type": "LOCALE_DT_FUNC",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "LOCAL_STORAGE",
     "named": true,
     "fields": {}
   },
@@ -1277,6 +1302,11 @@
   },
   {
     "type": "WORDS",
+    "named": true,
+    "fields": {}
+  },
+  {
+    "type": "WORKING_STORAGE",
     "named": true,
     "fields": {}
   },
@@ -3424,8 +3454,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "CONFIGURATION",
+          "named": true
+        },
+        {
+          "type": "SECTION",
+          "named": true
+        },
         {
           "type": "object_computer_paragraph",
           "named": true
@@ -4759,8 +4797,16 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "DIVISION",
+          "named": true
+        },
+        {
+          "type": "ENVIRONMENT",
+          "named": true
+        },
         {
           "type": "configuration_section",
           "named": true
@@ -6223,6 +6269,18 @@
       "required": false,
       "types": [
         {
+          "type": "FILE_CONTROL",
+          "named": true
+        },
+        {
+          "type": "INPUT_OUTPUT",
+          "named": true
+        },
+        {
+          "type": "SECTION",
+          "named": true
+        },
+        {
           "type": "i_o_control",
           "named": true
         },
@@ -7388,9 +7446,17 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "LINKAGE",
+          "named": true
+        },
+        {
+          "type": "SECTION",
+          "named": true
+        },
         {
           "type": "record_description_list",
           "named": true
@@ -7403,9 +7469,17 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "LOCAL_STORAGE",
+          "named": true
+        },
+        {
+          "type": "SECTION",
+          "named": true
+        },
         {
           "type": "record_description_list",
           "named": true
@@ -9992,8 +10066,12 @@
     "fields": {},
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "DIVISION",
+          "named": true
+        },
         {
           "type": "END_ACCEPT",
           "named": true
@@ -10072,6 +10150,10 @@
         },
         {
           "type": "END_WRITE",
+          "named": true
+        },
+        {
+          "type": "PROCEDURE",
           "named": true
         },
         {
@@ -14394,6 +14476,10 @@
       "required": true,
       "types": [
         {
+          "type": "VALUE",
+          "named": true
+        },
+        {
           "type": "value_item",
           "named": true
         }
@@ -14802,8 +14888,16 @@
     },
     "children": {
       "multiple": true,
-      "required": false,
+      "required": true,
       "types": [
+        {
+          "type": "SECTION",
+          "named": true
+        },
+        {
+          "type": "WORKING_STORAGE",
+          "named": true
+        },
         {
           "type": "any_length_clause",
           "named": true

@@ -15,7 +15,11 @@ source computer
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (source_computer_paragraph)))))
 
 ====================================
@@ -35,7 +39,11 @@ source computer linux
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (source_computer_paragraph
           (WORD))))))
 
@@ -56,7 +64,11 @@ source computer debugging mode
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (source_computer_paragraph
           (with_debugging_mode))))))
 
@@ -77,7 +89,11 @@ source computer with debugging mode
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (source_computer_paragraph
           (with_debugging_mode))))))
 
@@ -98,7 +114,11 @@ source computer linux debugging mode
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (source_computer_paragraph
           (WORD)
           (with_debugging_mode))))))
@@ -120,7 +140,11 @@ source computer linux with debugging mode
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (source_computer_paragraph
           (WORD)
           (with_debugging_mode))))))
@@ -142,7 +166,11 @@ object computer
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (object_computer_paragraph)))))
 
 ====================================
@@ -162,7 +190,11 @@ object computer linux
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (object_computer_paragraph
           (WORD))))))
 
@@ -183,7 +215,11 @@ object computer memory size is 2 words
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (object_computer_paragraph
           (object_computer_memory
             (integer)
@@ -206,7 +242,11 @@ object computer memory size 2 characters
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (object_computer_paragraph
           (object_computer_memory
             (integer)
@@ -232,7 +272,11 @@ object computer program collating sequence is ebcdic-code
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (object_computer_paragraph
           (object_computer_sequence
             (qualified_word
@@ -260,7 +304,11 @@ object computer segment-limit is 2.
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (configuration_section
+        (CONFIGURATION)
+        (SECTION)
         (object_computer_paragraph
           (object_computer_segment
             (integer)))))))

@@ -29,12 +29,9 @@
 
 ; Paragraph/section headers (like function definitions)
 (paragraph_header
-  name: (WORD) @function)
+  name: (WORD) @function.definition)
 (section_header
-  name: (WORD) @function)
-
-; Data entry names (variable definitions)
-(entry_name) @variable.definition
+  name: (WORD) @function.definition)
 
 ; Labels in PERFORM calls (like function calls)
 (label
@@ -46,6 +43,13 @@
   (IDENTIFICATION)
   (DATA)
   (DIVISION)
+  (ENVIRONMENT)
+  (CONFIGURATION)
+  (WORKING_STORAGE)
+  (LINKAGE)
+  (LOCAL_STORAGE)
+  (INPUT_OUTPUT)
+  (FILE_CONTROL)
   (FD)
   (SD)
   (SECTION)
@@ -383,9 +387,6 @@
   (YYYYDDD)
   (YYYYMMDD)
 ] @constant
-
-; Variable references (fallback for all identifiers)
-(WORD) @variable
 
 ; Punctuation
 (period) @punctuation.delimiter

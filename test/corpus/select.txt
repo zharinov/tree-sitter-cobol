@@ -16,7 +16,12 @@ assign
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -42,7 +47,12 @@ assign to
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -68,7 +78,12 @@ assign to DISK
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -94,7 +109,12 @@ assign to string_literal
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -120,7 +140,12 @@ assign to external
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -147,7 +172,12 @@ assign to dynamic
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -174,7 +204,12 @@ assign to dynamic DISPLAY
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -201,7 +236,12 @@ assign to PRINTER string_literal
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -228,7 +268,12 @@ assign to PRINTER string_literal qualified_word
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -261,7 +306,12 @@ access SEQUENTIAL
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -286,7 +336,12 @@ access mode SEQUENTIAL
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -311,7 +366,12 @@ access is SEQUENTIAL
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -336,7 +396,12 @@ access mode is SEQUENTIAL
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -361,7 +426,12 @@ access mode is DYNAMIC
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -386,7 +456,12 @@ access mode is RANDOM
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -416,7 +491,12 @@ alternate record
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -428,6 +508,8 @@ alternate record
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -461,7 +543,12 @@ alternate record key
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -473,6 +560,8 @@ alternate record key
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -506,7 +595,12 @@ alternate record is
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -518,6 +612,8 @@ alternate record is
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -551,7 +647,12 @@ alternate record key is
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -563,6 +664,8 @@ alternate record key is
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -596,7 +699,12 @@ alternate record duplicates
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -609,6 +717,8 @@ alternate record duplicates
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -642,7 +752,12 @@ alternate record with duplicates
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -655,6 +770,8 @@ alternate record with duplicates
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -683,7 +800,12 @@ sequence
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -708,7 +830,12 @@ collating sequence
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -733,7 +860,12 @@ sequence is
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -758,7 +890,12 @@ collating sequence is
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)

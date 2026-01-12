@@ -463,11 +463,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_ENVIRONMENT"
+          "name": "ENVIRONMENT"
         },
         {
           "type": "SYMBOL",
-          "name": "_DIVISION"
+          "name": "DIVISION"
         },
         {
           "type": "STRING",
@@ -526,11 +526,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_CONFIGURATION"
+          "name": "CONFIGURATION"
         },
         {
           "type": "SYMBOL",
-          "name": "_SECTION"
+          "name": "SECTION"
         },
         {
           "type": "STRING",
@@ -1791,11 +1791,11 @@
           "members": [
             {
               "type": "SYMBOL",
-              "name": "_INPUT_OUTPUT"
+              "name": "INPUT_OUTPUT"
             },
             {
               "type": "SYMBOL",
-              "name": "_SECTION"
+              "name": "SECTION"
             },
             {
               "type": "STRING",
@@ -1842,7 +1842,7 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_FILE_CONTROL"
+          "name": "FILE_CONTROL"
         },
         {
           "type": "STRING",
@@ -4564,11 +4564,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_WORKING_STORAGE"
+          "name": "WORKING_STORAGE"
         },
         {
           "type": "SYMBOL",
-          "name": "_SECTION"
+          "name": "SECTION"
         },
         {
           "type": "STRING",
@@ -6300,7 +6300,7 @@
             "members": [
               {
                 "type": "SYMBOL",
-                "name": "_VALUE"
+                "name": "VALUE"
               },
               {
                 "type": "SYMBOL",
@@ -6498,11 +6498,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_LOCAL_STORAGE"
+          "name": "LOCAL_STORAGE"
         },
         {
           "type": "SYMBOL",
-          "name": "_SECTION"
+          "name": "SECTION"
         },
         {
           "type": "STRING",
@@ -6519,11 +6519,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_LINKAGE"
+          "name": "LINKAGE"
         },
         {
           "type": "SYMBOL",
-          "name": "_SECTION"
+          "name": "SECTION"
         },
         {
           "type": "STRING",
@@ -6548,11 +6548,11 @@
       "members": [
         {
           "type": "SYMBOL",
-          "name": "_PROCEDURE"
+          "name": "PROCEDURE"
         },
         {
           "type": "SYMBOL",
-          "name": "_DIVISION"
+          "name": "DIVISION"
         },
         {
           "type": "CHOICE",
@@ -18591,6 +18591,10 @@
       "type": "SYMBOL",
       "name": "_CONCATENATE_FUNC"
     },
+    "CONFIGURATION": {
+      "type": "SYMBOL",
+      "name": "_CONFIGURATION"
+    },
     "CONTINUE": {
       "type": "SYMBOL",
       "name": "_CONTINUE"
@@ -18815,6 +18819,10 @@
       "type": "SYMBOL",
       "name": "_FD"
     },
+    "FILE_CONTROL": {
+      "type": "SYMBOL",
+      "name": "_FILE_CONTROL"
+    },
     "FILE_ID": {
       "type": "SYMBOL",
       "name": "_FILE_ID"
@@ -18895,6 +18903,10 @@
       "type": "SYMBOL",
       "name": "_INPUT"
     },
+    "INPUT_OUTPUT": {
+      "type": "SYMBOL",
+      "name": "_INPUT_OUTPUT"
+    },
     "INSPECT": {
       "type": "SYMBOL",
       "name": "_INSPECT"
@@ -18927,6 +18939,10 @@
       "type": "SYMBOL",
       "name": "_LINES"
     },
+    "LINKAGE": {
+      "type": "SYMBOL",
+      "name": "_LINKAGE"
+    },
     "LITERAL": {
       "type": "SYMBOL",
       "name": "_LITERAL"
@@ -18934,6 +18950,10 @@
     "LOCALE_DT_FUNC": {
       "type": "SYMBOL",
       "name": "_LOCALE_DT_FUNC"
+    },
+    "LOCAL_STORAGE": {
+      "type": "SYMBOL",
+      "name": "_LOCAL_STORAGE"
     },
     "LOCK": {
       "type": "SYMBOL",
@@ -19422,6 +19442,10 @@
     "WORDS": {
       "type": "SYMBOL",
       "name": "_WORDS"
+    },
+    "WORKING_STORAGE": {
+      "type": "SYMBOL",
+      "name": "_WORKING_STORAGE"
     },
     "WRITE": {
       "type": "SYMBOL",

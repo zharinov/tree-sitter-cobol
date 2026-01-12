@@ -18,6 +18,8 @@ evaluate when
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (evaluate_header
         (EVALUATE)
         (evaluate_subject
@@ -61,6 +63,8 @@ evaluate when 2
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (evaluate_header
         (EVALUATE)
         (evaluate_subject
@@ -116,6 +120,8 @@ evaluate when other
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (evaluate_header
         (EVALUATE)
         (evaluate_subject
@@ -175,6 +181,8 @@ evaluate when when
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (evaluate_header
         (EVALUATE)
         (evaluate_subject
@@ -220,6 +228,8 @@ evaluate when also
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (evaluate_header
         (EVALUATE)
         (evaluate_subject

@@ -16,6 +16,8 @@ go
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (paragraph_header
         name: (WORD))
       (goto_statement
@@ -45,6 +47,8 @@ go to
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (paragraph_header
         name: (WORD))
       (goto_statement
@@ -80,6 +84,8 @@ go to depending
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -87,6 +93,8 @@ go to depending
             (PIC)
             (picture_9)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (goto_statement
         (GO)
         to: (label
@@ -127,6 +135,8 @@ go to depending on
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -134,6 +144,8 @@ go to depending on
             (PIC)
             (picture_9)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (goto_statement
         (GO)
         to: (label
@@ -168,6 +180,8 @@ go string
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (paragraph_header
         name: (WORD))
       (goto_statement
@@ -197,6 +211,8 @@ go string of string
       (DIVISION)
       (program_name))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (paragraph_header
         name: (WORD))
       (goto_statement

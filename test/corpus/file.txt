@@ -18,7 +18,12 @@ open input
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -26,6 +31,8 @@ open input
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (open_statement
         (OPEN)
         (open_arg
@@ -53,7 +60,12 @@ open output
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -61,6 +73,8 @@ open output
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (open_statement
         (OPEN)
         (open_arg
@@ -88,7 +102,12 @@ open i-o
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -96,6 +115,8 @@ open i-o
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (open_statement
         (OPEN)
         (open_arg
@@ -123,7 +144,12 @@ open extend
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -131,6 +157,8 @@ open extend
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (open_statement
         (OPEN)
         (open_arg
@@ -158,7 +186,12 @@ close
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -166,6 +199,8 @@ close
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -192,7 +227,12 @@ close reel
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -200,6 +240,8 @@ close reel
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -228,7 +270,12 @@ close unit
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -236,6 +283,8 @@ close unit
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -264,7 +313,12 @@ close unit removal
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -272,6 +326,8 @@ close unit removal
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -301,7 +357,12 @@ close unit for removal
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -309,6 +370,8 @@ close unit for removal
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -338,7 +401,12 @@ close unit no rewind
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -346,6 +414,8 @@ close unit no rewind
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -375,7 +445,12 @@ close unit with no rewind
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -383,6 +458,8 @@ close unit with no rewind
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -412,7 +489,12 @@ close unit lock
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -420,6 +502,8 @@ close unit lock
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg
@@ -448,7 +532,12 @@ close unit with lock
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -456,6 +545,8 @@ close unit with lock
             (ASSIGN)
             to: (PRINTER)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (close_statement
         (CLOSE)
         (close_arg

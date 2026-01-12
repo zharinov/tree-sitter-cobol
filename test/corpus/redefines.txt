@@ -24,6 +24,8 @@ Redefines
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name))
@@ -57,4 +59,6 @@ Redefines
           (picture_clause
             (PIC)
             (picture_9)))))
-    (procedure_division)))
+    (procedure_division
+      (PROCEDURE)
+      (DIVISION))))

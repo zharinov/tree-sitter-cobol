@@ -27,6 +27,8 @@ PIC 9
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -81,4 +83,6 @@ PIC 9
           (picture_clause
             (PIC)
             (picture_9)))))
-    (procedure_division)))
+    (procedure_division
+      (PROCEDURE)
+      (DIVISION))))

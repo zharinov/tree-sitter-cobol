@@ -26,7 +26,12 @@ file-section
       (DIVISION)
       (program_name))
     (environment_division
+      (ENVIRONMENT)
+      (DIVISION)
       (input_output_section
+        (INPUT_OUTPUT)
+        (SECTION)
+        (FILE_CONTROL)
         (select_statement
           (SELECT)
           file_name: (WORD)
@@ -56,6 +61,8 @@ file-section
                 (PICTURE)
                 (picture_x))))))
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -63,6 +70,8 @@ file-section
             (PICTURE)
             (picture_9)))))
     (procedure_division
+      (PROCEDURE)
+      (DIVISION)
       (display_statement
         (DISPLAY)
         (number
@@ -90,6 +99,8 @@ value clause
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -97,10 +108,13 @@ value clause
             (PICTURE)
             (picture_9))
           (value_clause
+            (VALUE)
             (value_item
               (number
                 (decimal)))))))
-    (procedure_division)))
+    (procedure_division
+      (PROCEDURE)
+      (DIVISION))))
 
 ====================================
 picture decimal
@@ -123,6 +137,8 @@ picture decimal
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -130,10 +146,13 @@ picture decimal
             (PICTURE)
             (picture_9))
           (value_clause
+            (VALUE)
             (value_item
               (number
                 (decimal)))))))
-    (procedure_division)))
+    (procedure_division
+      (PROCEDURE)
+      (DIVISION))))
 
 ====================================
 computational
@@ -156,6 +175,8 @@ computational
       (DATA)
       (DIVISION)
       (working_storage_section
+        (WORKING_STORAGE)
+        (SECTION)
         (data_description
           (level_number)
           (entry_name)
@@ -164,4 +185,6 @@ computational
             (picture_9))
           (usage_clause
             (COMPUTATIONAL)))))
-    (procedure_division)))
+    (procedure_division
+      (PROCEDURE)
+      (DIVISION))))

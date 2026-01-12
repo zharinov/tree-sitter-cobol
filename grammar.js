@@ -144,8 +144,8 @@ module.exports = grammar({
     ),
 
     environment_division: $ => seq(
-      $._ENVIRONMENT,
-      $._DIVISION,
+      $.ENVIRONMENT,
+      $.DIVISION,
       '.',
       optional(choice(
         seq(optional($.configuration_section), optional($.input_output_section)),
@@ -154,8 +154,8 @@ module.exports = grammar({
     ),
 
     configuration_section: $ => seq(
-      $._CONFIGURATION,
-      $._SECTION,
+      $.CONFIGURATION,
+      $.SECTION,
       '.',
       repeat($._configuration_paragraph)
     ),
@@ -415,7 +415,7 @@ module.exports = grammar({
 
     input_output_section: $ => choice(
       seq(
-        $._INPUT_OUTPUT, $._SECTION, '.',
+        $.INPUT_OUTPUT, $.SECTION, '.',
         optional($._file_control_paragraph),
         optional($._i_o_control_paragraph)
       ),
@@ -424,7 +424,7 @@ module.exports = grammar({
     ),
 
     _file_control_paragraph: $ => seq(
-      $._FILE_CONTROL, '.',
+      $.FILE_CONTROL, '.',
       repeat($.select_statement)
     ),
 
@@ -898,7 +898,7 @@ module.exports = grammar({
     ),
 
     working_storage_section: $ => seq(
-      $._WORKING_STORAGE, $._SECTION, '.',
+      $.WORKING_STORAGE, $.SECTION, '.',
       repeat(choice(
         seq($.data_description, repeat1('.')),
         seq($.level_number, optional($.entry_name), $._copy_clause,
@@ -1214,7 +1214,7 @@ module.exports = grammar({
     based_clause: $ => $._BASED,
 
     value_clause: $ => prec.right(seq(
-      choice($._VALUE, $._VALUES),
+      choice($.VALUE, $._VALUES),
       optional(choice($._IS, $._ARE)),
       repeat1($.value_item),
       optional($._WHEN),
@@ -1249,14 +1249,14 @@ module.exports = grammar({
     ),
 
     local_storage_section: $ => seq(
-      $._LOCAL_STORAGE,
-      $._SECTION,
+      $.LOCAL_STORAGE,
+      $.SECTION,
       '.',
       $.record_description_list
     ),
 
     linkage_section: $ => seq(
-      $._LINKAGE, $._SECTION, '.',
+      $.LINKAGE, $.SECTION, '.',
       $.record_description_list
     ),
 
@@ -1265,7 +1265,7 @@ module.exports = grammar({
 
     //todo
     procedure_division: $ => seq(
-      $._PROCEDURE, $._DIVISION,
+      $.PROCEDURE, $.DIVISION,
       optional($.procedure_using_chaining),
       optional($.procedure_returning),
       '.',
@@ -3414,7 +3414,7 @@ module.exports = grammar({
     COMP_5: $ => $._COMP_5,
     COMP_X: $ => $._COMP_X,
     CONCATENATE_FUNC: $ => $._CONCATENATE_FUNC,
-    //CONFIGURATION: $ => $._CONFIGURATION,
+    CONFIGURATION: $ => $._CONFIGURATION,
     //CONSTANT: $ => $._CONSTANT,
     //CONTAINS: $ => $._CONTAINS,
     //CONTENT: $ => $._CONTENT,
@@ -3501,7 +3501,7 @@ module.exports = grammar({
     EXTEND: $ => $._EXTEND,
     EXTERNAL: $ => $._EXTERNAL,
     FD: $ => $._FD,
-    //FILE_CONTROL: $ => $._FILE_CONTROL,
+    FILE_CONTROL: $ => $._FILE_CONTROL,
     FILE_ID: $ => $._FILE_ID,
     FILLER: $ => $._FILLER,
     //FINAL: $ => $._FINAL,
@@ -3540,7 +3540,7 @@ module.exports = grammar({
     INITIALIZED: $ => $._INITIALIZED,
     //INITIATE: $ => $._INITIATE,
     INPUT: $ => $._INPUT,
-    //INPUT_OUTPUT: $ => $._INPUT_OUTPUT,
+    INPUT_OUTPUT: $ => $._INPUT_OUTPUT,
     INSPECT: $ => $._INSPECT,
     //INTO: $ => $._INTO,
     //INTRINSIC: $ => $._INTRINSIC,
@@ -3567,11 +3567,11 @@ module.exports = grammar({
     //LINAGE_COUNTER: $ => $._LINAGE_COUNTER,
     LINE: $ => $._LINE,
     LINES: $ => $._LINES,
-    //LINKAGE: $ => $._LINKAGE,
+    LINKAGE: $ => $._LINKAGE,
     LITERAL: $ => $._LITERAL,
     //LOCALE: $ => $._LOCALE,
     LOCALE_DT_FUNC: $ => $._LOCALE_DT_FUNC,
-    //LOCAL_STORAGE: $ => $._LOCAL_STORAGE,
+    LOCAL_STORAGE: $ => $._LOCAL_STORAGE,
     LOCK: $ => $._LOCK,
     LOWER_CASE_FUNC: $ => $._LOWER_CASE_FUNC,
     LOWLIGHT: $ => $._LOWLIGHT,
@@ -3777,7 +3777,7 @@ module.exports = grammar({
     //WITH: $ => $._WITH,
     WORD: $ => $._WORD,
     WORDS: $ => $._WORDS,
-    //WORKING_STORAGE: $ => $._WORKING_STORAGE,
+    WORKING_STORAGE: $ => $._WORKING_STORAGE,
     WRITE: $ => $._WRITE,
     YYYYDDD: $ => $._YYYYDDD,
     YYYYMMDD: $ => $._YYYYMMDD,
